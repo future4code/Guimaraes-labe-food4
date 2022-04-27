@@ -1,12 +1,12 @@
 import React from 'react';
-import HomePage from './pages/HomePage/HomePage'
-import LoginPage from './pages/LoginPage/LoginPage'
+import Router from './routes/Router'
+import { GlobalStateContext } from "./global/GlobalStateContext";
 
 const App = () => {
   return (
-    <div>
-        Hello World
-    </div>
+    <GlobalStateContext>
+    <Router/>
+    </GlobalStateContext>
   );
 }
 
