@@ -1,12 +1,14 @@
 import React from 'react';
 import Router from './routes/Router'
-import { GlobalStateContext } from "./global/GlobalStateContext";
+import { ThemeProvider } from '@material-ui/core/styles';
+import theme from './constants/theme';
+
 
 const App = () => {
   return (
-    <GlobalStateContext>
+    <ThemeProvider theme={theme}>
     <Router/>
-    </GlobalStateContext>
+    </ThemeProvider>
   );
 }
 
