@@ -14,18 +14,18 @@ import ErrorPage from '../pages/ErrorPage/ErrorPage'
 const Router = () => {
     return (
         <BrowserRouter>
-        <Routes>
-            <Route  path='/' index element ={<HomePage/>} />
-            <Route path='/LoginPage' element={<LoginPage/>} />
-            <Route path='/SignUpPage' element={<SignUpPage/>} />
-            <Route path = '/SignUpAddress' element={<SignUpAddress/>}/>
-            <Route path = '/RestaurantPage' element={<RestaurantPage/>}/>
-            <Route path = '/OrderPage' element={<OrderPage/>}/>
-            <Route path = '/ProfilePage' element={<ProfilePage/>}/>
-            <Route path = '/EditProfilePage' element={<EditProfilePage/>}/>
-            <Route path = '/EditAddressPage' element={<EditAddressPage/>}/>
-            <Route path = '*' element={<ErrorPage/>}/>
-        </Routes>
+            <Routes>
+                <Route index element ={<HomePage/>} />
+                <Route path='/LoginPage' element={<LoginPage/>} />
+                <Route path='/SignUpPage' element={<SignUpPage/>} />
+                <Route path = '/SignUpAddress' element={<SignUpAddress/>}/>
+                <Route path = '/RestaurantPage' element={<RestaurantPage/>}/>
+                <Route path = '/OrderPage' element={<OrderPage/>}/>
+                <Route path = '/ProfilePage' element={<ProfilePage/>}/>
+                <Route path = '/EditProfilePage' element={<EditProfilePage/>}/>
+                <Route path = '/EditAddressPage' element={<EditAddressPage/>}/>
+                <Route path = '*' element={<ErrorPage/>}/>
+            </Routes>
         </BrowserRouter>
     )
 }

@@ -1,12 +1,10 @@
 import React from "react";
 import { GlobalStateContext } from "./GlobalStateContext";
 
-const GlobalState = () => {
+const GlobalState = (props) => {
     return (
         <GlobalStateContext.Provider>
-            <div>
-
-            </div>
+          {props.children}
         </GlobalStateContext.Provider>
     )
 }
