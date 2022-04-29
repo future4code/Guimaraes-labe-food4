@@ -4,15 +4,17 @@ import Footer from '../../components/Footer/Footer'
 import ClickButton from '../../components/Button/ClickButton'
 
 
-
 const HomePage = () => {
     return (
-        <>
+        <div>
             <Header/>
             <h1>HomePage</h1>
-            <ClickButton >Criar</ClickButton>
+            <ClickButton/>
             <Footer/>
-        </>
+                   
+                   
+                   
+        </div>
     )
 }
 
