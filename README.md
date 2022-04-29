@@ -1,5 +1,5 @@
  <!-- TITLE -->
- <h1 align="center" id="top"> :pizza: Projeto LabeFood 4Food :pizza:</h1>
+ <h1 align="center" id="top"> :pizza: Projeto LabeFood Rappi4 :pizza:</h1>
  
   <!-- LICENSE -->
 <p align="center">
