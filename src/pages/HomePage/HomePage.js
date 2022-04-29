@@ -1,16 +1,18 @@
 import React from "react";
-import Button from '@material-ui/core/Button';
+import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
+import ClickButton from '../../components/Button/ClickButton'
+
 
 
 const HomePage = () => {
     return (
-        <div>
+        <>
+            <Header/>
             <h1>HomePage</h1>
-                    <Button variant="contained" color="primary" disableRipple
-                    fullWidth>
-                    criar
-                    </Button>
-        </div>
+            <ClickButton >Criar</ClickButton>
+            <Footer/>
+        </>
     )
 }
 
