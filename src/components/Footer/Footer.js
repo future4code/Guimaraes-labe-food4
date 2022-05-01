@@ -11,13 +11,15 @@ import {goToProfilePage } from "../../routes/coordinator";
 import {goToOrderPage} from "../../routes/coordinator";
 import {goToHomePage} from "../../routes/coordinator";
 
+
 function Footer() {
   const [value, setValue] = React.useState(0);
   const navigate = useNavigate()
 
   return (
+  
       <FooterStyle>
-    <Box sx={{ width: 400 }} >
+    <Box sx={{ width: 420 }} >
       <BottomNavigation
         value={value}
         onChange={(event, newValue) => {
@@ -40,6 +42,7 @@ function Footer() {
       </BottomNavigation>
     </Box>
     </FooterStyle>
+  
   );
 }
 

@@ -1,16 +1,25 @@
 import React from "react";
-import Header from '../../components/Header/Header'
+import HeaderHome from '../../components/Header/HeaderHome'
 import Footer from '../../components/Footer/Footer'
-import ClickButton from '../../components/Button/ClickButton'
-
+import CardRestaurant from "../../components/CardRestaurant/CardRestaurant";
+import Container from '@material-ui/core/Container';
 
 const HomePage = () => {
     return (
-        <div>
-            <Header/>
-            <h1>HomePage</h1>
-            <ClickButton/>
+        <div style={{paddingBottom: "56px"}}>
+            
+            <HeaderHome/>
+            <Container maxWidth="sm"  style={{paddingTop: '60px'}}>
+            <p>Seach</p>
+            <CardRestaurant/>   
+            <CardRestaurant/>   
+            <CardRestaurant/>   
+            <CardRestaurant/>   
+            <CardRestaurant/>         
+            </Container>
             <Footer/>
+            
+           
                    
                    
                    
