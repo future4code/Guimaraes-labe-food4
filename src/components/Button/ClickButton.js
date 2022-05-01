@@ -15,8 +15,10 @@ const ClickButtonn = styled(Button)({
 
 const ClickButton = () => {
     return (
+        <div style={{margin: "16px auto"}}>
         <ClickButtonn variant="contained" color="primary"
-        fullWidth> Criar</ClickButtonn>
+        fullWidth>Criar</ClickButtonn>
+        </div>
     )
 }
 

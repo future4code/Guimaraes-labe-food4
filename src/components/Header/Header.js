@@ -4,8 +4,8 @@ import Button from '@material-ui/core/Button'
 import { styled } from '@material-ui/core/styles';
 import {useNavigate} from "react-router-dom"
 import {goBack} from '../../routes/coordinator'
-import {Text} from "./styled";
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
+
 
 const BootstrapButton = styled(AppBar)({
     display: 'flex',
@@ -27,9 +27,9 @@ const Header = () => {
     return (
         <BootstrapButton position="static">
        
-            <Button onClick={() => goBack(navigate)} style={{float: "center"}}color="inherit">
+            <Button onClick={() => goBack(navigate)} style={{float: "start"}}color="inherit">
             <ArrowBackIosIcon/></Button>
-            <Text color="inherit" style={{float: "center"}}> Buscar</Text>
+          
                       
         </BootstrapButton>
 
