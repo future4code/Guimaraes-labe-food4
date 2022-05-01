@@ -11,11 +11,7 @@ const HomePage = () => {
             <HeaderHome/>
             <Container maxWidth="sm"  style={{paddingTop: '60px'}}>
             <p>Seach</p>
-            <CardRestaurant/>   
-            <CardRestaurant/>   
-            <CardRestaurant/>   
-            <CardRestaurant/>   
-            <CardRestaurant/>         
+            <CardRestaurant/>          
             </Container>
             <Footer/>
             
