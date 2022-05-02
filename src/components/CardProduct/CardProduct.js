@@ -1,5 +1,5 @@
 import  React from 'react';
-import Card from "@material-ui/core/Card";
+
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from "@material-ui/core/IconButton";
@@ -15,6 +15,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Collapse from '@material-ui/core/Collapse';
 import { useNavigate } from "react-router-dom";
 import {goToOrderPage} from "../../routes/coordinator";
+import { CardImg, CardProd, ContainerProd, ProductValue } from './styled';
 
 
 const style = {
@@ -65,17 +66,21 @@ const CardProduct = () => {
   const navigate = useNavigate()
 
   return (
-    <div style={{marginBottom: "16px"}}>
-    <Card >
+    <div style={{marginBottom: "16px"}}> 
+     
+   
+    <CardProd >
 
       <CardHeader
         avatar={
-            <CardMedia
+            <CardImg>
+              <CardMedia
             component="img"
-            height="80"
+            height="112.6"
             image="https://www.qgjeitinhocaseiro.com/wp-content/uploads/2019/11/BLOG-21-11.png"
             alt="imagem-produto"
           />
+           </CardImg>
         }
         action={
           <IconButton aria-label="settings">
@@ -131,13 +136,19 @@ const CardProduct = () => {
         <Typography variant="body2" color="text.secondary">
         Pão de queijo, carne, picles e molho
         <br></br>
-        R$ 23,00
+        <ProductValue>
+          <ProductValue>
+            R$ 23,00
+
+          </ProductValue>
+        </ProductValue>
         </Typography>
           }
         
       />
-    </Card> 
-
+      
+    </CardProd> 
+   
 
     <Box
         sx={{
@@ -171,7 +182,7 @@ id="child-modal-description" color="text.primary">
           </Collapse>
       </Box>
   
-
+     
     </div>
     );
 }
