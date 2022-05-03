@@ -1,6 +1,7 @@
 import React from "react";
 import { ContainerCard, ContainerPrincipal, Tela } from "./styled";
 import Header from '../../components/Header/Header'
+import Footer from '../../components/Footer/Footer'
 import CardRestaurant from '../../components/CardRestaurant/CardRestaurant'
 import CardProduct from "../../components/CardProduct/CardProduct";
 import { Title } from "../../components/CardProduct/styled";
@@ -21,6 +22,7 @@ const RestaurantPage = () => {
                 <CardProduct/>
             </ContainerCard>
             </ContainerPrincipal>
+            <Footer/>
         </Tela>
     )
 }
