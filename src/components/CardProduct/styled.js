@@ -2,9 +2,9 @@ import styled from "styled-components";
 import Card from "@material-ui/core/Card";
 
 export const CardProd=styled(Card)`
-  width:328px ;
+  width:350px ;
   height: 112px;
-  margin: 0;
+  margin:0 auto;
   padding-bottom:12px ;
     
   border-radius: 8px;
