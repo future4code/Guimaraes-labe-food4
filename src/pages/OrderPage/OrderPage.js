@@ -3,7 +3,7 @@ import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Footer from "../../components/Footer/Footer";
 import Header from '../../components/Header/Header'
-import { BoxEndereco, ContainerTela, Flex } from "./styled";
+import { BoxEndereco, Font, ContainerTela, Flex } from "./styled";
 import CardOrder from '../../components/CardOrder/CardOrder'
 import Radio from '@material-ui/core/Radio'
 import FormControl from '@material-ui/core/FormControl'
@@ -42,7 +42,8 @@ const OrderPage = (props) => {
         //handleSubmit(e);
     }
     return (
-        <ContainerTela>
+        <Font>
+       
             <Header title="Car"/>
             
             <BoxEndereco>
@@ -55,7 +56,7 @@ const OrderPage = (props) => {
                
                 </Typography>
             </BoxEndereco>
-               
+            <ContainerTela>
              <Container>
                  <div style={{marginBottom:"16px" }}>
                  <Typography gutterBottom variant="p" component="div" color="primary">
@@ -144,6 +145,7 @@ id="child-modal-description" color="text.primary">
             </Container>
             <Footer/>
         </ContainerTela>
+        </Font>
         
     )
 }
