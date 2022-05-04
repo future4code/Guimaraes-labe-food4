@@ -4,16 +4,16 @@ import { styled } from '@material-ui/core/styles';
 
 
 const BootstrapButton = styled(AppBar)({
-    display: 'flex',
-    textTransform: 'none',
-    flexDirection: 'row',
-    fontSize: 16,
-    padding: '16px 12px',
-    lineHeight: 1.5,
-    backgroundColor: '#ffffff',
-    justifyContent: 'center',
-    width: 420,
-    margin:0,
+  display: 'flex',
+  boxShadow: 'none',
+  textTransform: 'none',
+  justifyContent: 'center',
+  flexDirection: 'row',
+  fontSize: 16,
+  padding: '6px 12px',
+  lineHeight: 1.5,
+  backgroundColor: '#ffffff',
+  borderBottom:'1px solid #E5E5EA'
   });
 
 
