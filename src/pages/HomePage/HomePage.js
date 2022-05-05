@@ -4,6 +4,7 @@ import Footer from '../../components/Footer/Footer'
 import CardRestaurant from "../../components/CardRestaurant/CardRestaurant";
 import Container from '@material-ui/core/Container';
 import { ContainerPrincipal, Tela } from "./styled";
+import Header from "../../components/Header/Header";
 
 const HomePage = () => {
     return (
@@ -12,6 +13,7 @@ const HomePage = () => {
             <HeaderHome/>
             <Container maxWidth="sm"  style={{paddingTop: '60px', paddingBottom: '50px'}}>
             <p>Seach</p>
+            
             <CardRestaurant/>  
                    
             </Container> 
