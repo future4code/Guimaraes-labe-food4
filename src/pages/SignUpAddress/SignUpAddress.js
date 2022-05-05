@@ -1,10 +1,12 @@
 import React from "react";
+import AdressForm from "./AdressForm";
+import { ScreenContainer } from "./styled";
 
 const SignUpAddress = () => {
     return (
-        <div>
-            <h1>Cadastro página 2 : endereço</h1>
-        </div>
+        <ScreenContainer>
+            <AdressForm />
+        </ScreenContainer>
     )
 }
 
