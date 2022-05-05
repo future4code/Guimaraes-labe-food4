@@ -7,6 +7,10 @@ export const ContainerTela=styled.div`
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    div.endereco{
+        width:100% ;
+        padding-left:52px ;
+    }
 
 
 `
