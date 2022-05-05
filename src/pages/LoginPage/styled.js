@@ -1,15 +1,13 @@
 import styled from 'styled-components'
 
-export const Container = styled.div `
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width:100vw;
-  margin-top: 10vh;
-
-
-`
+export const  Tela=styled.div`
+    display: flex ;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    padding-top:80px;
+    font-family: 'Roboto', sans-serif;`
 
 export const InputsContainer = styled.div`
 
@@ -51,12 +49,14 @@ export const SignUpButton = styled.div `
 
   width: 80vw;
   max-width: 450px;
+  text-align: center;
+  text-decoration: none;
 
 `
   
   export const LogoImage = styled.img `
 
-    width: 70vw;
+    width: 104px;
     max-width: 250px;
   
   `

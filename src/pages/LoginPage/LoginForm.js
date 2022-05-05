@@ -4,7 +4,19 @@ import useForm from "../../hooks/useForm"
 import Button from '@material-ui/core/Button'
 import { InputsContainer} from './styled'
 import './login.css'
+import { styled } from '@material-ui/core/styles'
 
+
+const ClickButtonn = styled(Button)({
+   
+    textTransform: 'none',
+    boxShadow: 'none',
+    fontSize: 16,
+    padding: '6px 12px',
+    lineHeight: 2.0,
+    marginTop:'20px',
+    marginBottom:'20px'
+  });
 
 
 
@@ -57,17 +69,12 @@ const LoginForm = () => {
             
             />
 
-
-            <Button
-            type ={"submit"}
-            fullWidth
-            variant ={"contained"}
-            color ={"primaryColor"}
-            >
-              
-              Fazer Login
-              
-              </Button>       
+          <ClickButtonn 
+          variant="contained" 
+          color="primary"
+          fullWidth
+          > <b>Entrar</b>
+          </ClickButtonn>
 
           </form>
 

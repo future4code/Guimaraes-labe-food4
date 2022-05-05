@@ -1,10 +1,19 @@
-import React from "react";
+import React, {useEffect} from "react";
+import Logobranca from '../../assets/Logobranca.png'
+import {Tela} from'./styles'
 
-const LoadingLogo = () => {
+const LoadingLogo = (props) => {
+
+    useEffect(() => {
+        setTimeout(() => { 
+          props.setLoading(false);
+        }, 1500);
+      }, []);
+      
     return (
-        <div>
-            <h1>Loading Logo Inicial</h1>
-        </div>
+        <Tela>
+            <img src={Logobranca}/>
+        </Tela>
     )
 }
 

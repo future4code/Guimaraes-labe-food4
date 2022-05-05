@@ -3,9 +3,12 @@ import HeaderHome from '../../components/Header/HeaderHome'
 import Footer from '../../components/Footer/Footer'
 import CardRestaurant from "../../components/CardRestaurant/CardRestaurant";
 import Container from '@material-ui/core/Container';
-import { ContainerPrincipal, Tela } from "./styled";
+import { Tela } from "./styled";
+import useProtectedPage from "../../hooks/useProtectedPage";
+
 
 const HomePage = () => {
+    useProtectedPage();
     return (
 
         <Tela>

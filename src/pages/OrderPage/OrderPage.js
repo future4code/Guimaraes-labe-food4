@@ -23,7 +23,7 @@ const ClickButtonn = styled(Button)({
    
     textTransform: 'none',
     boxShadow: 'none',
-    fontSize: 23,
+    fontSize: 16,
     padding: '6px 12px',
     lineHeight: 2.0,
     marginBottom:'50px',
@@ -108,7 +108,8 @@ const OrderPage = (props) => {
                </FormControl>
                <div style={{margin: "16px auto"}}>
         <ClickButtonn variant="contained" color="primary"
-        fullWidth onClick={handleClick}>Confirmar</ClickButtonn>
+        fullWidth onClick={handleClick}
+        ><b>Confirmar </b></ClickButtonn>
         </div>
 
         <Box
