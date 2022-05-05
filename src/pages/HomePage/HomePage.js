@@ -4,8 +4,11 @@ import Footer from '../../components/Footer/Footer'
 import CardRestaurant from "../../components/CardRestaurant/CardRestaurant";
 import Container from '@material-ui/core/Container';
 import { Tela } from "./styled";
+import useProtectedPage from "../../hooks/useProtectedPage";
+
 
 const HomePage = () => {
+    useProtectedPage();
     return (
 
         <Tela>
