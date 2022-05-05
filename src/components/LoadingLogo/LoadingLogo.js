@@ -1,10 +1,12 @@
 import React from "react";
+import Logobranca from '../../assets/Logobranca.png'
+import {Tela} from'./styles'
 
 const LoadingLogo = () => {
     return (
-        <div>
-            <h1>Loading Logo Inicial</h1>
-        </div>
+        <Tela>
+            <img src={Logobranca}/>
+        </Tela>
     )
 }
 
