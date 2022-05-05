@@ -4,12 +4,11 @@ import styled from "styled-components";
 export const ContainerPrincipal=styled.div`
     
     min-height:834px ;
-    
     display: flex ;
     flex-direction:column ;
-    
-    
     overflow:hidden ;
+    margin-bottom: 56px;
+   
 
 `
 export const  Tela=styled.div`
@@ -19,6 +18,5 @@ export const  Tela=styled.div`
     font-family: 'Roboto', sans-serif;
 `
 export const ContainerCard=styled.div`
-    
-
+  margin: 12px;
 `

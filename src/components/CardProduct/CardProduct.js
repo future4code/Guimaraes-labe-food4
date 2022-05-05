@@ -15,7 +15,7 @@ import CloseIcon from '@material-ui/icons/Close';
 import Collapse from '@material-ui/core/Collapse';
 import { useNavigate } from "react-router-dom";
 import {goToOrderPage} from "../../routes/coordinator";
-import { CardImg, CardProd, ContainerProd, ProductValue } from './styled';
+import { CardImg, CardProd, ProductValue } from './styled';
 
 
 const style = {

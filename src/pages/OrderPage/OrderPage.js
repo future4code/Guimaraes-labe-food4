@@ -3,7 +3,7 @@ import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Footer from "../../components/Footer/Footer";
 import Header from '../../components/Header/Header'
-import { BoxEndereco, ContainerTela, Flex } from "./styled";
+import { BoxEndereco, Font, ContainerTela, Flex } from "./styled";
 import CardOrder from '../../components/CardOrder/CardOrder'
 import Radio from '@material-ui/core/Radio'
 import FormControl from '@material-ui/core/FormControl'
@@ -23,7 +23,7 @@ const ClickButtonn = styled(Button)({
    
     textTransform: 'none',
     boxShadow: 'none',
-    fontSize: 23,
+    fontSize: 16,
     padding: '6px 12px',
     lineHeight: 2.0,
     marginBottom:'50px',
@@ -42,10 +42,11 @@ const OrderPage = (props) => {
         //handleSubmit(e);
     }
     return (
-        <ContainerTela>
-            <Header title="Car"/>
+        <Font>
+            <ContainerTela>
+            <Header title="Carrinho"/>
             
-            <BoxEndereco>
+            <BoxEndereco className="endereco">
                 <Typography gutterBottom variant="p" component="div" color="text.primary">
                 <strong>Endereço de entrega</strong>
                
@@ -55,7 +56,8 @@ const OrderPage = (props) => {
                
                 </Typography>
             </BoxEndereco>
-               
+            </ContainerTela>
+            <ContainerTela>
              <Container>
                  <div style={{marginBottom:"16px" }}>
                  <Typography gutterBottom variant="p" component="div" color="primary">
@@ -107,7 +109,8 @@ const OrderPage = (props) => {
                </FormControl>
                <div style={{margin: "16px auto"}}>
         <ClickButtonn variant="contained" color="primary"
-        fullWidth onClick={handleClick}>Confirmar</ClickButtonn>
+        fullWidth onClick={handleClick}
+        ><b>Confirmar </b></ClickButtonn>
         </div>
 
         <Box
@@ -144,6 +147,7 @@ id="child-modal-description" color="text.primary">
             </Container>
             <Footer/>
         </ContainerTela>
+        </Font>
         
     )
 }

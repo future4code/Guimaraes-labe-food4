@@ -3,23 +3,23 @@ import HeaderHome from '../../components/Header/HeaderHome'
 import Footer from '../../components/Footer/Footer'
 import CardRestaurant from "../../components/CardRestaurant/CardRestaurant";
 import Container from '@material-ui/core/Container';
+import { Tela } from "./styled";
+import useProtectedPage from "../../hooks/useProtectedPage";
+
 
 const HomePage = () => {
+    useProtectedPage();
     return (
-        <div style={{paddingBottom: "56px"}}>
-            
+
+        <Tela>
             <HeaderHome/>
-            <Container maxWidth="sm"  style={{paddingTop: '60px'}}>
+            <Container maxWidth="sm"  style={{paddingTop: '60px', paddingBottom: '50px'}}>
             <p>Seach</p>
-            <CardRestaurant/>          
-            </Container>
-            <Footer/>
-            
-           
+            <CardRestaurant/>  
                    
-                   
-                   
-        </div>
+            </Container> 
+        <Footer/>          
+        </Tela>
     )
 }
 
