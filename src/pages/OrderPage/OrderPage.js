@@ -43,10 +43,10 @@ const OrderPage = (props) => {
     }
     return (
         <Font>
-       
-            <Header title="Car"/>
+            <ContainerTela>
+            <Header title="Carrinho"/>
             
-            <BoxEndereco>
+            <BoxEndereco className="endereco">
                 <Typography gutterBottom variant="p" component="div" color="text.primary">
                 <strong>Endereço de entrega</strong>
                
@@ -56,6 +56,7 @@ const OrderPage = (props) => {
                
                 </Typography>
             </BoxEndereco>
+            </ContainerTela>
             <ContainerTela>
              <Container>
                  <div style={{marginBottom:"16px" }}>
