@@ -1,10 +1,19 @@
 import React from "react";
+import AdressForm from "./AdressForm";
+import { ScreenContainer } from "./styled";
+import Header from '../../components/Header/Header'
 
 const SignUpAddress = () => {
     return (
-        <div>
-            <h1>Cadastro página 2 : endereço</h1>
-        </div>
+        <>
+        <Header/>
+        <ScreenContainer>
+         <AdressForm />
+        </ScreenContainer>
+        </>
+       
+       
+       
     )
 }
 

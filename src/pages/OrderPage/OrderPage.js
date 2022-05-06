@@ -3,7 +3,7 @@ import React from "react";
 import Typography from '@material-ui/core/Typography';
 import Footer from "../../components/Footer/Footer";
 import Header from '../../components/Header/Header'
-import { BoxEndereco, Font, ContainerTela, Flex } from "./styled";
+import { BoxEndereco, Font, ContainerTela, Flex, ModalCustom} from "./styled";
 import CardOrder from '../../components/CardOrder/CardOrder'
 import Radio from '@material-ui/core/Radio'
 import FormControl from '@material-ui/core/FormControl'
@@ -14,22 +14,37 @@ import { styled } from '@material-ui/core/styles';
 import { useNavigate } from "react-router-dom";
 import { goToHomePage } from "../../routes/coordinator";
 import Collapse from '@material-ui/core/Collapse';
-import Box from '@material-ui/core/Box';
+import { Box } from "@material-ui/core";
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import { Modal } from "@material-ui/core";
 
-
+const style = {
+    position: 'absolute' ,
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)',
+    width: 400,
+    bgcolor: '#e86e5a',
+    border: '2px solid #000',
+    boxShadow: 24,
+    p: 4,
+    color:"white",
+  };
 
 const ClickButtonn = styled(Button)({
    
     textTransform: 'none',
     boxShadow: 'none',
-    fontSize: 23,
+    fontSize: 16,
     padding: '6px 12px',
     lineHeight: 2.0,
     marginBottom:'50px',
   });
 const OrderPage = (props) => {
     const navigate = useNavigate()
+    const [open, setOpen] = React.useState(false);
+  const handleOpen = () => setOpen(true);
+  const handleClose = () => setOpen(false);
     //Collapse
     const [checked, setChecked] = React.useState(false);
     const handleChange = () => {
@@ -37,16 +52,39 @@ const OrderPage = (props) => {
     };
     const handleClick=(e)=>{
         
+        
         goToHomePage(navigate)
         handleChange();
+        
         //handleSubmit(e);
     }
     return (
         <Font>
-       
-            <Header title="Car"/>
-            
-            <BoxEndereco>
+            <ContainerTela>
+            <Header title="Carrinho"/>
+           
+      <Modal
+        open={open}
+        onClose={handleClick}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <ModalCustom  sx={style}>
+        <AccessTimeIcon  fontSize="large"/>
+          <div>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+          Pedido em andamento
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <p> Bullguer Vila Madalena</p>
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            <h3>SUBTOTAL R$67,00</h3>
+          </Typography>
+          </div>
+        </ModalCustom>
+      </Modal>
+            <BoxEndereco className="endereco">
                 <Typography gutterBottom variant="p" component="div" color="text.primary">
                 <strong>Endereço de entrega</strong>
                
@@ -56,6 +94,7 @@ const OrderPage = (props) => {
                
                 </Typography>
             </BoxEndereco>
+            </ContainerTela>
             <ContainerTela>
              <Container>
                  <div style={{marginBottom:"16px" }}>
@@ -108,7 +147,8 @@ const OrderPage = (props) => {
                </FormControl>
                <div style={{margin: "16px auto"}}>
         <ClickButtonn variant="contained" color="primary"
-        fullWidth onClick={handleClick}>Confirmar</ClickButtonn>
+        fullWidth onClick={handleOpen}
+        ><b>Confirmar </b></ClickButtonn>
         </div>
 
         <Box
