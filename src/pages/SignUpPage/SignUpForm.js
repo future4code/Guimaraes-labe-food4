@@ -6,6 +6,20 @@ import { InputsContainer, SignUpFormContainer } from "./styled";
 import { signUp } from "../../services/user";
 import { useNavigate } from "react-router-dom";
 import { goToSignUpAddress } from "../../routes/coordinator";
+import { styled } from '@material-ui/core/styles'
+
+
+const ClickButtonn = styled(Button)({
+   
+    textTransform: 'none',
+    boxShadow: 'none',
+    fontSize: 16,
+    padding: '6px 12px',
+    lineHeight: 2.0,
+    marginTop:'20px',
+    marginBottom:'20px'
+  });
+
 
 const SignUpForm = () => {
 
@@ -84,7 +98,7 @@ const SignUpForm = () => {
                     />
                 </InputsContainer>
 
-                <Button
+                <ClickButtonn 
                 color={'primary'}
                 variant={'contained'}
                 type={'submit'}
@@ -92,7 +106,7 @@ const SignUpForm = () => {
                 fontWeight={'bold'}
                 >
                 Criar
-                </Button>
+                </ClickButtonn >
 
             </SignUpFormContainer>
         </form>

@@ -13,7 +13,7 @@ import LoadingLogo from "../../components/LoadingLogo/LoadingLogo"
 
 
 const LoginPage = () => {
-  useUnprotectedPage();
+ 
   const navigate = useNavigate()
   const [loading, setLoading] = useState(true)
 
@@ -29,7 +29,7 @@ const LoginPage = () => {
 
 
 
-      <span class='Text Text-Style'>
+      <span className='Text Text-Style'>
         Entrar
       </span>
 

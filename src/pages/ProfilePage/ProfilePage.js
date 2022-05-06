@@ -1,7 +1,9 @@
 import { Typography } from "@material-ui/core";
 import { EditOutlined } from "@material-ui/icons";
 import React from "react";
-import { BoxProfile, BoxAddress, HeaderProfile, ScreenContainer, BoxHistory } from "./styled";
+import Footer from "../../components/Footer/Footer";
+import CardHistory from '../../components/CardHistory/CardHistory'
+import { BoxProfile, BoxAddress,CardContainer, HeaderProfile, ScreenContainer, BoxHistory } from "./styled";
 
 const ProfilePage = () => {
     return (
@@ -33,11 +35,13 @@ const ProfilePage = () => {
                 </BoxAddress>
 
                 <BoxHistory>
-                    <Typography>Histórico de Pedidos</Typography>
+                    <Typography><b>Histórico de Pedidos</b></Typography>
                 </BoxHistory>
-
+                <CardContainer>
+                    <CardHistory/>
+                    </CardContainer>
             </ScreenContainer>
-
+            <Footer/>
         </div>
         
     )
