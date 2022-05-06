@@ -5,7 +5,7 @@ import { styled } from '@material-ui/core/styles';
 import {useNavigate} from "react-router-dom"
 import {goBack} from '../../routes/coordinator'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
-import styledComponents from 'styled-components';
+import {Titulo} from './styled'
 
 const BootstrapButton = styled(AppBar)({
     display: 'flex',
@@ -16,23 +16,10 @@ const BootstrapButton = styled(AppBar)({
     padding: '6px 12px',
     lineHeight: 1.5,
     backgroundColor: '#ffffff',
+    border: 'none',
     borderBottom:'1px solid #E5E5EA'
   });
-const Titulo=styledComponents.span`
-    position:absolute;
-    text-align:center;
-    width:335px;
-    font-size:16px;
-    margin-top:;
-    line-Height: 35px;
-    border:1px solid red;
   
-  
-    z-index:1;
-   
-    
-    
-`
 
 
 const Header = (props) => {
@@ -43,7 +30,10 @@ const Header = (props) => {
         <BootstrapButton position="static">
        
             <Button onClick={() => goBack(navigate)} style={{float: "start"}}color="inherit">
-            <ArrowBackIosIcon/></Button><Titulo>{props.title}</Titulo>
+            <ArrowBackIosIcon/></Button>
+          
+            <Titulo>{props.title}</Titulo>
+         
           
                       
         </BootstrapButton>

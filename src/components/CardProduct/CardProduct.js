@@ -1,5 +1,4 @@
 import  React from 'react';
-
 import CardHeader from "@material-ui/core/CardHeader";
 import CardMedia from '@material-ui/core/CardMedia';
 import IconButton from "@material-ui/core/IconButton";
@@ -106,6 +105,7 @@ const CardProduct = () => {
     id="demo-simple-select"
    // value={age}
     label="0"
+    color="inherit" 
     //onChange={handleChange}
   >
     <MenuItem value={1}>1</MenuItem>
