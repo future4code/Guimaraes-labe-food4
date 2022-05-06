@@ -7,6 +7,7 @@ import { Tela } from "./styled";
 import useProtectedPage from "../../hooks/useProtectedPage";
 
 
+
 const HomePage = () => {
    
     return (
@@ -15,6 +16,7 @@ const HomePage = () => {
             <HeaderHome/>
             <Container maxWidth="sm"  style={{paddingTop: '60px', paddingBottom: '50px'}}>
             <p>Seach</p>
+            
             <CardRestaurant/>  
                    
             </Container> 

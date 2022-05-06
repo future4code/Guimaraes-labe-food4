@@ -1,6 +1,6 @@
 
 import styled from 'styled-components';
-
+import { Box } from "@material-ui/core";
 
 export const ContainerTela=styled.div`
     display: flex ;
@@ -29,4 +29,16 @@ display: flex;
 justify-content: space-between;
 
 `;
+
+export const ModalCustom=styled(Box)`
+ display:flex ;
+ justify-content:space-evenly ;
+ align-items: center;
+ p{
+     color:black;
+     font-weight:bolder ;
+ }
+ 
+`
+
 
