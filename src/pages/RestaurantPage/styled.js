@@ -20,3 +20,15 @@ export const  Tela=styled.div`
 export const ContainerCard=styled.div`
   margin: 12px;
 `
+
+
+export const Flex = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+`;
+export const Flex2=styled.div`
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+`

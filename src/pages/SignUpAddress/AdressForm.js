@@ -3,7 +3,21 @@ import useForm from "../../hooks/useForm"
 import TextField from '@material-ui/core/TextField'
 import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
-import { InputsContainer } from "./styled";
+import { InputsContainer, Text } from "./styled";
+import { styled } from '@material-ui/core/styles'
+
+
+
+const ClickButtonn = styled(Button)({
+   
+    textTransform: 'none',
+    boxShadow: 'none',
+    fontSize: 16,
+    padding: '6px 12px',
+    lineHeight: 2.0,
+    marginTop:'20px',
+    marginBottom:'20px'
+  });
 
 const AdressForm = () => {
 
@@ -16,8 +30,8 @@ const AdressForm = () => {
     return (
         <form onSubmit={onSubmitForm}>
             <div>
-
-            <Typography variant="h6" style={{textAlign:"center", fontWeight:"bold"}}>Meu Endereço</Typography>
+          
+            <Text>Meu endereço</Text>
 
                 <InputsContainer>
                     <TextField 
@@ -93,17 +107,12 @@ const AdressForm = () => {
                     />
 
                 </InputsContainer>
-
-                <Button
-                    type={"submit"}
-                    variant={"contained"}
-                    color={"primary"}
-                    margin={"normal"}
-                    fullWidth
-                    style={{fontWeight:"bold"}}
-                >
-                Salvar
-                </Button>
+                <ClickButtonn 
+                variant="contained" 
+                color="primary"
+                fullWidth
+                > <b>Salvar</b>
+                </ClickButtonn>
             </div>
     </form>
     )

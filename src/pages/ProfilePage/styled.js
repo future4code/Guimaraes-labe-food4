@@ -33,3 +33,10 @@ export const BoxHistory = styled.div`
     padding: 20px 16px 10px 16px;
     border-bottom: 1px solid #E5E5EA;
 `
+
+export const CardContainer = styled.div`
+display: flex;
+flex-direction: column;
+justify-content: center;
+margin: 20px;
+`
