@@ -14,10 +14,10 @@ const CardHistory = () => {
           <Typography gutterBottom variant="h6" component="div" color="primary">
             Bullguer Vila Madalena
           </Typography>
-          <Typography variant="body2" color="text.secondary">
+          <Typography  color="text.primary">
              23 outubro 2019
             </Typography>
-            <Typography variant="h6" color="text.secondary">
+            <Typography  color="inherit" >
             <b>SUBTOTAL R$67,00 </b>
             </Typography>
          

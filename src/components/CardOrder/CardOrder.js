@@ -36,7 +36,7 @@ const CardOrder = () => {
         <Typography variant="body2" color="text.secondary">
         Pão de queijo, carne, picles e molho
         <br ></br>
-        R$ 23,00
+        <b>R$ 23,00</b>
         <br></br>
         Quantidade: 2
         </Typography>

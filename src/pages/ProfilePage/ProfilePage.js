@@ -40,8 +40,9 @@ const ProfilePage = () => {
                 <CardContainer>
                     <CardHistory/>
                     </CardContainer>
+                    <Footer/>
             </ScreenContainer>
-            <Footer/>
+          
         </div>
         
     )
