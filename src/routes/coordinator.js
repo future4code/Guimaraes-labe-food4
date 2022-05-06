@@ -36,3 +36,7 @@ export const goToHomePage = (navigate) => {
     navigate(`/EditAddressPage`);
   }
 
+  export const goToSearchPage = (navigate) => {
+    navigate(`/SearchPage`);
+  }
+

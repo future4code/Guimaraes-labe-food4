@@ -25,7 +25,7 @@ const Titulo=styledComponents.span`
     font-size:16px;
     margin-top:;
     line-Height: 35px;
-    border:1px solid red;
+   
   
   
     z-index:1;

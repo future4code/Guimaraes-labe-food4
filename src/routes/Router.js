@@ -10,6 +10,7 @@ import ProfilePage from '../pages/ProfilePage/ProfilePage'
 import EditProfilePage from '../pages/EditProfilePage/EditProfilePage'
 import EditAddressPage from '../pages/EditAddressPage/EditAddressPage'
 import ErrorPage from '../pages/ErrorPage/ErrorPage'
+import SearchPage from '../pages/SearchPage/SearchPage'
 
 const Router = () => {
     return (
@@ -19,6 +20,7 @@ const Router = () => {
                 <Route path='/LoginPage' element={<LoginPage/>} />
                 <Route path='/SignUpPage' element={<SignUpPage/>} />
                 <Route path = '/SignUpAddress' element={<SignUpAddress/>}/>
+                <Route path = '/SearchPage' element={<SearchPage />}/>
                 <Route path = '/RestaurantPage' element={<RestaurantPage/>}/>
                 <Route path = '/OrderPage' element={<OrderPage/>}/>
                 <Route path = '/ProfilePage' element={<ProfilePage/>}/>
