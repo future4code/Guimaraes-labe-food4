@@ -62,6 +62,7 @@ const OrderPage = (props) => {
         <Font>
             <ContainerTela>
             <Header title="Carrinho"/>
+
            
       <Modal
         open={open}
@@ -84,6 +85,7 @@ const OrderPage = (props) => {
           </div>
         </ModalCustom>
       </Modal>
+
             <BoxEndereco className="endereco">
                 <Typography gutterBottom variant="p" component="div" color="text.primary">
                 <strong>Endereço de entrega</strong>
@@ -147,7 +149,9 @@ const OrderPage = (props) => {
                </FormControl>
                <div style={{margin: "16px auto"}}>
         <ClickButtonn variant="contained" color="primary"
+
         fullWidth onClick={handleOpen}
+
         ><b>Confirmar </b></ClickButtonn>
         </div>
 
