@@ -1,17 +1,13 @@
 import { TextField, Typography } from "@material-ui/core";
-import { ArrowBackIos } from "@material-ui/icons";
 import React from "react";
-import { HeaderSearch, InputsContainer, ScreenContainer } from "./styled";
+import {  InputsContainer, ScreenContainer } from "./styled";
+import Header from '../../components/Header/Header'
 
 const SearchPage = () => {
     return (
         <div>
-            <HeaderSearch>
-                <ArrowBackIos />
-                <Typography style={{fontWeight:"bold", marginRight:"30px"}}>Buscar</Typography>
-                <div>     </div>
-            </HeaderSearch>
-
+       
+       <Header title="Buscar"/>
             <ScreenContainer>      
                 <InputsContainer>
                     <TextField 

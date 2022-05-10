@@ -11,9 +11,7 @@ import Button from '@material-ui/core/Button';
 import MenuItem from '@material-ui/core/MenuItem';
 import Select from '@material-ui/core/Select';
 import CloseIcon from '@material-ui/icons/Close';
-import Collapse from '@material-ui/core/Collapse';
 import { useNavigate } from "react-router-dom";
-import {goToOrderPage} from "../../routes/coordinator";
 import { CardImg, CardProd, ProductValue } from './styled';
 
 
@@ -48,17 +46,11 @@ const CardProduct = () => {
       setOpen(false);
     };
 
-    //Collapse
-    const [checked, setChecked] = React.useState(false);
-    const handleChange = () => {
-    setChecked((prev) => !prev);
-    };
 
   //botão submit
 
     const handleClick=(e)=>{
       handleClose();
-      handleChange();
       //handleSubmit(e);
   }
 
@@ -148,41 +140,7 @@ const CardProduct = () => {
       />
       
     </CardProd> 
-   
-
-    <Box
-        sx={{
-          '& > :not(style)': {
-            width: 400,
-            bottom: 0,
-          },
-        }} bgcolor="primary.main"
-        onClick={() => goToOrderPage(navigate)}>
-<Collapse in={checked}>
   
-<div style={{display: "flex", justifyContent: 'flex-start'}}>
-<div style={{marginLeft: "36px", paddingBottom:"20px", paddingTop:"20px"}}>
- <AccessTimeIcon color="secondary" fontSize="large"/>
-</div>
-<div style={{marginLeft: "36px", paddingBottom:"20px",  paddingTop:"20px"}}>
-<Typography variant="body1" 
-id="child-modal-description" color="secondary">
-Pedido em Andamento
-</Typography>
-<Typography variant="body2" 
-id="child-modal-description" color="text.primary">
-<b>Bullguer Vila Mariana</b>
-</Typography>
-<Typography variant="body2" color="text.primary" >
-<b>SUBTOTAL R$67,00</b>
-  </Typography>
-  </div>
-  </div>
-
-          </Collapse>
-      </Box>
-  
-     
     </div>
     );
 }

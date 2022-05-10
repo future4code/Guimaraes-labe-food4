@@ -1,9 +1,9 @@
-import { TextField, Typography } from "@material-ui/core";
+import { TextField} from "@material-ui/core";
 import { Button } from "@material-ui/core";
-import { ArrowBackIos } from "@material-ui/icons";
 import useForm from "../../hooks/useForm";
 import React from "react";
-import { InputsContainer, ScreenContainer, HeaderEditProfile } from "./styled";
+import Header from '../../components/Header/Header'
+import { InputsContainer, ScreenContainer } from "./styled";
 
 const EditProfilePage = () => {
 
@@ -17,14 +17,9 @@ const EditProfilePage = () => {
         <form onSubmit={onSubmitForm}>
 
         <div>
-            <HeaderEditProfile>
-                <ArrowBackIos />
-                <Typography style={{fontWeight:"bold", marginRight:"30px"}}>Editar</Typography>
-                <div>     </div>
-            </HeaderEditProfile>
-
+            <Header title="Editar"/>
+        
             <ScreenContainer>
-            
                 <InputsContainer>
                     <TextField
                         value={form.name}
@@ -75,7 +70,7 @@ const EditProfilePage = () => {
 
                 
             </ScreenContainer>
-
+       
         </div>
 
        
