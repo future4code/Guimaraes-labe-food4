@@ -3,9 +3,14 @@ import { EditOutlined } from "@material-ui/icons";
 import React from "react";
 import Footer from "../../components/Footer/Footer";
 import CardHistory from '../../components/CardHistory/CardHistory'
+import { useNavigate } from 'react-router-dom'
 import { BoxProfile, BoxAddress,CardContainer, HeaderProfile, ScreenContainer, BoxHistory } from "./styled";
+import {goToEditProfilePage, goToEditAddressPage} from "../../routes/coordinator"
 
 const ProfilePage = () => {
+     
+ const navigate = useNavigate()
+
     return (
 
         <div>
@@ -21,7 +26,7 @@ const ProfilePage = () => {
                         <Typography>email@email.com</Typography>
                         <Typography>123.456.789-10</Typography>
                     </div>
-                    <EditOutlined />
+                    <a href="#"  onClick ={()=>goToEditProfilePage(navigate)}> <EditOutlined /></a>
 
                 </BoxProfile>
 
@@ -30,7 +35,8 @@ const ProfilePage = () => {
                         <Typography>Endereço Cadastrado</Typography>
                         <Typography>Rua São João, 179 - centro - Sao Paulo, SP</Typography>
                     </div>   
-                    <EditOutlined />
+                    <a href="#"  onClick ={()=>goToEditAddressPage(navigate)}> <EditOutlined /></a>
+                   
                     
                 </BoxAddress>
 
