@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Carousel from 'react-material-ui-carousel'
+
 import {Text, Container} from './styles'
 
 const SliderComponent = () => {

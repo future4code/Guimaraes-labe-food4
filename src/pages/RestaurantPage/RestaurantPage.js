@@ -1,12 +1,13 @@
-import React from "react";
+import React, { useContext } from "react";
 import { ContainerCard, ContainerPrincipal, Tela } from "./styled";
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import CardRestaurant from '../../components/CardRestaurant/CardRestaurant'
 import CardProduct from "../../components/CardProduct/CardProduct";
 import { Title } from "../../components/CardProduct/styled";
-
+import { GlobalStateContext } from "../../global/GlobalStateContext";
 const RestaurantPage = () => {
+    const {restaurants,setRestaurants}=useContext(GlobalStateContext)
     return (
         <Tela>
             <ContainerPrincipal>
@@ -16,7 +17,7 @@ const RestaurantPage = () => {
                 <Title>Principais</Title>
                 <CardProduct/> 
                 <CardProduct/> 
-
+               
                 <Title>Acompanhamentos</Title>
                 <CardProduct/>
                 <CardProduct/>
