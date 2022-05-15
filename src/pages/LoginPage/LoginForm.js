@@ -1,10 +1,16 @@
-import React from "react"
+import React, { useState } from "react"
 import TextField from '@material-ui/core/TextField'
 import useForm from "../../hooks/useForm"
 import Button from '@material-ui/core/Button'
 import { InputsContainer} from './styled'
 import './login.css'
 import { styled } from '@material-ui/core/styles'
+
+
+
+import { useNavigate } from "react-router-dom"
+import { login } from "../../services/user"
+import { CircularProgress } from "@material-ui/core"
 
 
 const ClickButtonn = styled(Button)({
@@ -23,16 +29,17 @@ const ClickButtonn = styled(Button)({
 
 
 const LoginForm = () => {
-
+  const navigate=useNavigate()
   const [form , onChange, clear] =useForm({email:"", password:""})
-
-
+  const [isLoading,setIsLoading]=useState(false)
+  
     const onSubmitForm =(event) =>{
+    
         event.preventDefault()
-        
-
+        login(form,navigate,clear,setIsLoading)
+        setIsLoading(!isLoading)
     }
-
+    
 
   return(
 
@@ -70,10 +77,11 @@ const LoginForm = () => {
             />
 
           <ClickButtonn 
+          type={"submit"}
           variant="contained" 
           color="primary"
           fullWidth
-          > <b>Entrar</b>
+          > {isLoading?<CircularProgress color="secondary" size={24}/>:<b>Entrar</b>}
           </ClickButtonn>
 
           </form>
