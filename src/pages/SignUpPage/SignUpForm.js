@@ -1,13 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import useForm from "../../hooks/useForm";
 import TextField from '@material-ui/core/TextField'
 import Button from "@material-ui/core/Button";
 import { InputsContainer, SignUpFormContainer } from "./styled";
 import { signUp } from "../../services/user";
 import { useNavigate } from "react-router-dom";
-import { goToSignUpAddress } from "../../routes/coordinator";
+import {  goToSignUpAddress } from "../../routes/coordinator";
 import { styled } from '@material-ui/core/styles'
-
+import { CircularProgress } from "@material-ui/core"
 
 const ClickButtonn = styled(Button)({
    
@@ -24,14 +24,25 @@ const ClickButtonn = styled(Button)({
 const SignUpForm = () => {
 
     const navigate = useNavigate()
-
-    const [form, onChange] = useForm({name:'', email:'', cpf:'', password:''})
+    const [isLoading,setIsLoading]=useState(false)
+    const [form, onChange] = useForm({name:'', email:'', cpf:'', password1:'',password2:''})
 
     const onSubmitForm = (event) => {
         event.preventDefault()
-        signUp(form)
-        goToSignUpAddress(navigate)
-        console.log(form)
+        const dados={name:form.name, email:form.email,cpf:form.cpf,password:form.password1}
+        console.log(dados)
+        if(form.password1===form.password2){
+        
+            console.log(dados)
+            signUp(dados)
+            goToSignUpAddress(navigate)
+
+        }
+        else{
+
+            alert(" senhas diferentes!")
+        }
+        
     }
 
     return (
@@ -74,8 +85,8 @@ const SignUpForm = () => {
                         inputProps={{pattern:"[0-9]{3}\.[0-9]{3}\.[0-9]{3}-[0-9]{2}"}}
                     />
                     <TextField
-                        value={form.password}
-                        name={'password'}
+                        value={form.password1}
+                        name={'password1'}
                         onChange={onChange}
                         label={'Senha'}
                         variant={'outlined'}
@@ -86,8 +97,8 @@ const SignUpForm = () => {
                         inputProps={{pattern: "[A-Za-z0-9]{6,}$" }}
                     />
                     <TextField
-                        value={form.password}
-                        name={'password'}
+                        value={form.password2}
+                        name={'password2'}
                         onChange={onChange}
                         label={'Confirme a sua senha'}
                         variant={'outlined'}
@@ -105,7 +116,8 @@ const SignUpForm = () => {
                 fullWidth
                 fontWeight={'bold'}
                 >
-                Criar
+                    {isLoading?<CircularProgress color="secondary" size={24}/>:<b>Criar</b>}
+                
                 </ClickButtonn >
 
             </SignUpFormContainer>

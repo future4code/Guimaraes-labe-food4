@@ -5,7 +5,7 @@ import Button from "@material-ui/core/Button";
 import Typography from "@material-ui/core/Typography";
 import { InputsContainer, Text } from "./styled";
 import { styled } from '@material-ui/core/styles'
-
+import { addAdress } from "../../services/user"
 
 
 const ClickButtonn = styled(Button)({
@@ -21,10 +21,11 @@ const ClickButtonn = styled(Button)({
 
 const AdressForm = () => {
 
-    const [form, onChange] = useForm({street:"", number:"", district:"", city:"", state:"", complement:""})
+    const [form, onChange,clear] = useForm({street:"", number:"", neighbourhood:"", city:"", state:"", complement:""})
 
-    const onSubmitForm = () => {
-
+    const onSubmitForm = (e) => {
+        e.preventDefault()
+        addAdress(form)
     }
 
     return (
@@ -41,7 +42,7 @@ const AdressForm = () => {
                         onChange={onChange}
                         variant={"outlined"}
                         margin={"normal"}
-                        type={"street"}
+                        type={"text"}
                         required
                         autoFocus
                         fullWidth
@@ -53,19 +54,19 @@ const AdressForm = () => {
                         onChange={onChange}
                         variant={"outlined"}
                         margin={"normal"}
-                        type={"number"}
+                        type={"text"}
                         required
                         autoFocus
                         fullWidth
                     />
                     <TextField 
-                        name={"district"}
-                        value={form.district}
+                        name={"neighbourhood"}
+                        value={form.neighbourhood}
                         label={"Bairro"}
                         onChange={onChange}
                         variant={"outlined"}
                         margin={"normal"}
-                        type={"district"}
+                        type={"text"}
                         required
                         autoFocus
                         fullWidth
@@ -77,7 +78,7 @@ const AdressForm = () => {
                         onChange={onChange}
                         variant={"outlined"}
                         margin={"normal"}
-                        type={"city"}
+                        type={"text"}
                         required
                         autoFocus
                         fullWidth
@@ -89,7 +90,7 @@ const AdressForm = () => {
                         onChange={onChange}
                         variant={"outlined"}
                         margin={"normal"}
-                        type={"state"}
+                        type={"text"}
                         required
                         autoFocus
                         fullWidth
@@ -101,13 +102,14 @@ const AdressForm = () => {
                         onChange={onChange}
                         variant={"outlined"}
                         margin={"normal"}
-                        type={"complement"}
+                        type={"text"}
                         autoFocus
                         fullWidth
                     />
 
                 </InputsContainer>
                 <ClickButtonn 
+                type={"submit"}
                 variant="contained" 
                 color="primary"
                 fullWidth
