@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect, useState} from "react";
 import HeaderHome from '../../components/Header/HeaderHome'
 import Footer from '../../components/Footer/Footer'
 import CardRestaurant from "../../components/CardRestaurant/CardRestaurant";
@@ -15,14 +15,60 @@ import OutlinedInput from '@material-ui/core/OutlinedInput';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import InputLabel from '@material-ui/core/InputLabel';
 import FormControl from '@material-ui/core/FormControl';
-
-
+import GlobalState from "../../global/GlobalState";
+import axios from "axios";
+import {BASE_URL} from '../../constants/url'
 
 const HomePage = () => {
     const navigate = useNavigate()
-    return (
+    const [restaurants,setRestaurants]=useState([])
+    const [filtroRestaurants,setFiltorRestaurants]=useState([])
+    
+    useEffect(()=>{
+        getRestaurants()
+       
+    },[])
+  const getRestaurants=()=>{
+    axios.get(`${BASE_URL}/restaurants`,{
+        headers:{
+            auth:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImlPdXY4TWNzTXdLVGUzYktRT09rIiwibmFtZSI6Imxlb25hcmRvIiwiZW1haWwiOiJsZW9uYXJkb0Bob3RtYWlsLmNvbSIsImNwZiI6IjEyMS4yMjEuMTExLTk5IiwiaGFzQWRkcmVzcyI6dHJ1ZSwiYWRkcmVzcyI6IlIuIEFmb25zbyBCcmF6LCAxNzcsIDcxMDAgLSBWaWxhIE4uIENvbmNlacOnw6NvIiwiaWF0IjoxNjUyNjM5MDgwfQ.HhlQTvUHHDqda3ffLeEmvYyJ7A-GJJuBH5CEncUS0c0"
+        }
+    }).then((response)=>{
+        setRestaurants(response.data.restaurants)
+        setFiltorRestaurants(response.data.restaurants)
+      
+    }).catch((error)=>{
+      console.log(error.response)
 
+    })
+    
+  }
+  const renderRestaurants=(props)=>{
+      
+         const restaurantes= restaurants.map((restaurant,index)=>{
+             return(
+                 <CardRestaurant key={index} imagem={restaurant.logoUrl} name={restaurant.name} deliveryTime={restaurant.deliveryTime} frete={restaurant.shipping}/>
+             )
+         })
+         return restaurantes
+      
+  }
+  const filtroRestaurant=(category)=>{
+    
+      const restaurantes=[...filtroRestaurants]
+      const filtro=restaurantes.filter((restaurante)=>{
+          return(
+            restaurante.category===category
+          )
+
+      }) 
+      setRestaurants(filtro)
+  }
+  
+    return (
+        
         <Tela>
+            
             <HeaderHome/>
             <Container maxWidth="sm"  style={{paddingTop: '60px', paddingBottom: '50px'}}>
 
@@ -34,16 +80,16 @@ const HomePage = () => {
                 </InputAdornment>}
           />
         </FormControl>
+        
+        
 
 
-
-
-            <SliderComponent/>
-   
-            <CardRestaurant/>  
-                   
+            <SliderComponent filtroRestaurant={filtroRestaurant} />
+            
+            {renderRestaurants()}
             </Container> 
-        <Footer/>          
+        <Footer/>
+                  
         </Tela>
     )
 }

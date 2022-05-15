@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import {Text, Container} from './styles'
 
-const SliderComponent = () => {
+const SliderComponent = (props) => {
   
   //const [searchType, setSearchType] = useState("");
 
@@ -18,47 +18,47 @@ const SliderComponent = () => {
         <Container>
           
           <Text 
-          //onClick={() => handleType("Hamburguer")}
+         onClick={()=>{props.filtroRestaurant("Hamburguer")}}
           >
             Hamburguer
           </Text>
           <Text 
-          //onClick={() => handleType("Asiática")}
+          onClick={()=>{props.filtroRestaurant("Asiática")}}
           >
             Asiática
           </Text>
           <Text 
-          //onClick={() => handleType("Árabe")}
+           onClick={()=>{props.filtroRestaurant("Árabe")}}
           >
             Árabe
           </Text>
           <Text 
-          //onClick={() => handleType("Italiana")}
+          onClick={()=>{props.filtroRestaurant("Italiana")}}
           >
             Italiana
           </Text>
           <Text 
-          //onClick={() => handleType("Sorvetes")}
+           onClick={()=>{props.filtroRestaurant("Sorvetes")}}
           >
             Sorvetes
           </Text>
           <Text 
-          //onClick={() => handleType("Carnes")}
+           onClick={()=>{props.filtroRestaurant("Carnes")}}
           >
             Carnes
           </Text>
           <Text 
-          //onClick={() => handleType("Baiana")}
+          onClick={()=>{props.filtroRestaurant("Baiana")}}
           >
             Baiana
           </Text>
           <Text 
-          //onClick={() => handleType("Petiscos")}
+          onClick={()=>{props.filtroRestaurant("Petiscos")}}
           >
             Petiscos
           </Text>
           <Text 
-          //onClick={() => handleType("Mexicana")}
+          onClick={()=>{props.filtroRestaurant("Mexicana")}}
           >
             Mexicana
           </Text>

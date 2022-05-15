@@ -5,17 +5,9 @@ import {BASE_URL} from '../constants/url'
 
 const GlobalState = (props) => {
   const [cart,setCart]=useState([])
-  const [restaurants,setRestaurants]=useState([])
-  const getRestaurants=()=>{
-    axios.get(`${BASE_URL}/restaurants`).then((response)=>{
-      console.log(response.data)
-    }).catch((error)=>{
-      console.log(error)
-
-    })
-  }
+  
     return (
-        <GlobalStateContext.Provider value={{cart,setCart,restaurants,setRestaurants,getRestaurants}}>
+        <GlobalStateContext.Provider value={{cart,setCart}}>
           {props.children}
         </GlobalStateContext.Provider>
     )

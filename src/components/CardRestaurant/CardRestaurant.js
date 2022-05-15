@@ -19,12 +19,12 @@ const CardRestaurant = (props) => {
           component="img"
           height="120"
           
-          image="https://www.qgjeitinhocaseiro.com/wp-content/uploads/2019/11/BLOG-21-11.png"
+          image= {props.imagem}
           alt="imagem-restaurante"
         />
         <CardContent>
           <Typography gutterBottom variant="h6" component="div" color="primary">
-            Vinil Butatã
+          {props.name}
           </Typography>
           <Flex>
           {props.categoria&&<Typography variant="body2" color="text.secondary">
@@ -32,11 +32,11 @@ const CardRestaurant = (props) => {
             </Typography>}
           <Flex2>
           <Typography variant="body2" color="text.secondary">
-              50-60 min
+          {props.deliveryTime} min
             </Typography>
             
             <Typography variant="body2" color="text.secondary">
-            Frete R$6,00
+            Frete : R$ {props.frete}
             </Typography>
           </Flex2>
           {props.endereco&&<Typography variant="body2" color="text.secondary">
