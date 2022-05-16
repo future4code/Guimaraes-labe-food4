@@ -4,9 +4,10 @@ import useForm from "../../hooks/useForm";
 import React from "react";
 import Header from '../../components/Header/Header'
 import { InputsContainer, ScreenContainer } from "./styled";
+import useProtectedPage from "../../hooks/useProtectedPage";
 
 const EditAddressPage = () => {
-
+    useProtectedPage()
     const [form, onChange] = useForm({name:'', email:'', cpf:''})
 
     const onSubmitForm = () => {

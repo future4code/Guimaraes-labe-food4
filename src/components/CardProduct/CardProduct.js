@@ -35,7 +35,7 @@ const style = {
 
   
 
-const CardProduct = () => {
+const CardProduct = (props) => {
 
   //Modal
     const [open, setOpen] = React.useState(false);

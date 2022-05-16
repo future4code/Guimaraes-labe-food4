@@ -16,6 +16,7 @@ import { goToHomePage } from "../../routes/coordinator";
 import AccessTimeIcon from '@material-ui/icons/AccessTime';
 import { Modal } from "@material-ui/core";
 import { GlobalStateContext } from "../../global/GlobalStateContext";
+import useProtectedPage from "../../hooks/useProtectedPage";
 
 const style = {
     position: 'absolute' ,
@@ -39,6 +40,7 @@ const ClickButtonn = styled(Button)({
     marginBottom:'50px',
   });
 const OrderPage = (props) => {
+    useProtectedPage()
     const navigate = useNavigate()
     const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
