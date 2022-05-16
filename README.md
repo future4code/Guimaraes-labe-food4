@@ -33,7 +33,7 @@ e utilizamo a api da labenu a <a href="https://documenter.getpostman.com/view/75
 </p>
 
 <h2 id="site"> :hamburger: Link do site </h2>
-<p>🔗 <a href="#" target="_blank"> Rappi4 </a>  </p>
+<p>🔗 <a href="actually-planes.surge.sh" target="_blank"> Rappi4 </a>  </p>
 
 <h2 id="tecnologias"> :sushi: Tecnologias Utilizadas </h2>
 
