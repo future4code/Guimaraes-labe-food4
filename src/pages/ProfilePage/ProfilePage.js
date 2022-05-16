@@ -6,9 +6,10 @@ import CardHistory from '../../components/CardHistory/CardHistory'
 import { useNavigate } from 'react-router-dom'
 import { BoxProfile, BoxAddress,CardContainer, HeaderProfile, ScreenContainer, BoxHistory } from "./styled";
 import {goToEditProfilePage, goToEditAddressPage} from "../../routes/coordinator"
+import useProtectedPage from "../../hooks/useProtectedPage";
 
 const ProfilePage = () => {
-     
+     useProtectedPage()
  const navigate = useNavigate()
 
     return (

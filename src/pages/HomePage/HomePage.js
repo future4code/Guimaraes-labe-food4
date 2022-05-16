@@ -5,7 +5,7 @@ import CardRestaurant from "../../components/CardRestaurant/CardRestaurant";
 import Container from '@material-ui/core/Container';
 import Box from '@material-ui/core/Box';
 import { Tela, ButtonSubmit, SubmitLine } from "./styled";
-import {goToSearchPage} from '../../routes/coordinator'
+import { goToSearchPage} from '../../routes/coordinator'
 import TextField from '@material-ui/core/TextField'
 import useProtectedPage from "../../hooks/useProtectedPage";
 import { useNavigate } from "react-router-dom";
@@ -23,6 +23,7 @@ const HomePage = () => {
     const navigate = useNavigate()
     const [restaurants,setRestaurants]=useState([])
     const [filtroRestaurants,setFiltorRestaurants]=useState([])
+    useProtectedPage()
     
     useEffect(()=>{
         getRestaurants()
@@ -43,11 +44,12 @@ const HomePage = () => {
     })
     
   }
+  
   const renderRestaurants=(props)=>{
       
          const restaurantes= restaurants.map((restaurant,index)=>{
              return(
-                 <CardRestaurant key={index} imagem={restaurant.logoUrl} name={restaurant.name} deliveryTime={restaurant.deliveryTime} frete={restaurant.shipping}/>
+                 <CardRestaurant key={index} imagem={restaurant.logoUrl} name={restaurant.name} deliveryTime={restaurant.deliveryTime} frete={restaurant.shipping} id={restaurant.id}/>
              )
          })
          return restaurantes

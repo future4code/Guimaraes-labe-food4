@@ -13,7 +13,7 @@ const CardRestaurant = (props) => {
 
   return (
     <div style={{marginBottom: "16px"}}>
-    <Card sx={{ maxWidth: 328 }} onClick={() => goToRestaurantPage(navigate)}>
+    <Card sx={{ maxWidth: 328 }} onClick={() => goToRestaurantPage(navigate,props.id)}>
       <CardActionArea>
         <CardMedia
           component="img"
